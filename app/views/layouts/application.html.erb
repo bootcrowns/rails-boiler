@@ -26,7 +26,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <ul class="nav nav-pills nav-fill">
         <% if staff_signed_in? %>
-          <li class="nav-item"><%=link_to "Dashboard", '#', class:"nav-link text-light", id:"dashboard-tab"%></li>
+          <li class="nav-item"><%=link_to "Dashboard", dashboard_path, class:"nav-link text-light", id:"dashboard-tab"%></li>
+          <li class="nav-item"><%=link_to "Students", students_path, class:"nav-link text-light", id:"students-tab"%></li>
         <% end %>
       </ul>
       <ul class="nav justify-content-end"">

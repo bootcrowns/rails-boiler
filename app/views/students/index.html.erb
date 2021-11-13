@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Students</h1>
+
+<div class="container pl-0 ml-0">
+  <% @students.each do |student| %>
+    <div class="row row-cols-3 m-2 ">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= student.full_name %></h5>
+          <h7 class="card-subtitle text-muted">Date of Birth: <%= student.dob.strftime("%d %b %Y") %></h7><br>
+          <h7 class="card-subtitle text-muted">Email: <%= student.email %></h7><br>
+          <h7 class="card-subtitle text-muted">Nationality: <%= student.nationality %></h7><br>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"></li>
+          <li class="list-group-item">Registered ID: <%= student.registered_id %></li>
+          <li class="list-group-item">Contact: <%= student.phone_number %></li>
+        </ul>
+        <div class="card-body">
+          <%= link_to 'Edit', edit_student_path(student), class: "card-link" %>
+          <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-link" %>
+          <%= link_to 'Show', student, class: "card-link" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Student', new_student_path, class: "btn btn-xs btn-success" %>

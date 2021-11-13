@@ -1,0 +1,18 @@
+
+<%= simple_form_for(@student) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs form-group">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :dob, start_year: Time.now.year-50, end_year: Time.now.year-15, order: %i(day month year) %>
+    <%= f.input :nationality %>
+    <%= f.input :email %>
+    <%= f.input :phone_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-xs btn-success" %>
+  </div>
+<% end %>

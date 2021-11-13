@@ -74,3 +74,4 @@ gem "dotenv-rails", groups: [:development, :test]
 
 gem "devise", "~> 4.7"
 gem "pundit", "~> 2.1"
+gem "phonelib", "~> 0.6.45"

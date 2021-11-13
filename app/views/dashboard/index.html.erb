@@ -1,5 +1,7 @@
-Hi
-<div>
-
-<%= link_to "Sign out", destroy_staff_session_path, :method => :delete %>
-</div>
+<% content_for :top_content do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+    </div>
+  </div>
+<% end %>

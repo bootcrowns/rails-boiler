@@ -32,7 +32,7 @@
       </ul>
       <ul class="nav justify-content-end"">
         <% if staff_signed_in? %>
-          <li class="nav-item"><%= link_to 'Profile', edit_staff_registration_path,class:"nav-link text-light" %></li>
+          <li class="nav-item"><%= link_to current_staff.email, edit_staff_registration_path,class:"nav-link text-light" %></li>
           <li class="nav-item"><%= link_to 'Log out', destroy_staff_session_path, method: :delete,class:"nav-link text-light" %></li>
         <% else %>
           <li class="nav-item"><%= link_to 'Log In', new_staff_session_path ,class:"nav-link text-light"%></li>

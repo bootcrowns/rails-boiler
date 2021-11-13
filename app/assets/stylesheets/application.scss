@@ -1,0 +1,14 @@
+/* ...
+*= require_self
+*= require_tree .
+*/
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import 'bootstrap';
+
+
+.body-pad { padding: 50px; }
+@media screen and (max-width: 1200px) {
+    .body-pad { padding-top: 120px; }
+}

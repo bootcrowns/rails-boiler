@@ -1,7 +1,56 @@
 <% content_for :top_content do %>
   <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
+    <div class="container-fluid ml-0">
+      <h1>Welcome <%= @staff.name %>!</h1>
     </div>
   </div>
 <% end %>
+
+<div class="container-fluid">
+  <div class="row">
+
+  <!-- Icon Cards-->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+        <div class="inforide">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+                <img src="">
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                <h4>Data</h4>
+                <h2>100</h2>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+        <div class="inforide">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+                <img src="">
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                <h4>Data</h4>
+                <h2>120</h2>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-2 mt-4">
+        <div class="inforide">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridethree">
+                <img src="">
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+                <h4>Data</h4>
+                <h2>50</h2>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>
+</div>

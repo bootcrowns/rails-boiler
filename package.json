@@ -1,5 +1,5 @@
 {
-  "name": "blueribbon",
+  "name": "rails-boiler",
   "private": true,
   "scripts": {
     "lint:rb": "bundle exec standardrb --fix"

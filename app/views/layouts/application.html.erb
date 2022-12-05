@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blueribbon</title>
+    <title>Admin</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -22,16 +22,16 @@
   </div>
   <% end %>
     <nav class="navbar navbar-light bg-dark fixed-top ">
-      <div><a class="navbar-brand" href="/"><span class="text-white">Blueribbon Agent Portal</span></a></div>
+      <div><a class="navbar-brand" href="/"><span class="text-white">Admin</span></a></div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <ul class="nav nav-pills nav-fill">
         <% if staff_signed_in? %>
-          <li class="nav-item"><%=link_to "Dashboard", '#', class:"nav-link text-light", id:"dashboard-tab"%></li>
+          <li class="nav-item"><%=link_to "Dashboard", dashboard_path, class:"nav-link text-light", id:"dashboard-tab"%></li>
         <% end %>
       </ul>
       <ul class="nav justify-content-end"">
         <% if staff_signed_in? %>
-          <li class="nav-item"><%= link_to 'Profile', edit_staff_registration_path,class:"nav-link text-light" %></li>
+          <li class="nav-item"><%= link_to current_staff.email, edit_staff_registration_path,class:"nav-link text-light" %></li>
           <li class="nav-item"><%= link_to 'Log out', destroy_staff_session_path, method: :delete,class:"nav-link text-light" %></li>
         <% else %>
           <li class="nav-item"><%= link_to 'Log In', new_staff_session_path ,class:"nav-link text-light"%></li>
